@@ -64,13 +64,15 @@ function showResultMov(result){
     displayimages.innerHTML="";
     result.forEach((index)=>{
         const photo=document.createElement("div");
-        
         photo.innerHTML=`
-        <div class="seemore"> 
-          <h3 id="">${index.title}</h3>
-          <button>See more</button>
+        <div class="container"> 
+         <div class="cardSub">
+           <h3 class="movietitle">${index.title}</h3>
+           <button class="btnSeeMore">See more</button>
+         </div>
+          <img src=${IMG_URL+index.poster_path}> 
         </div>
-        <img src=${IMG_URL+index.poster_path}>
+          
         
         `
 
